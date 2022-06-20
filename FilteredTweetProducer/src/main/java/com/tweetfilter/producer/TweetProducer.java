@@ -27,7 +27,6 @@ public class TweetProducer implements ITweetProducer{
 
     KafkaTemplate<Integer, String> kafkaTemplate;
     ObjectMapper objectMapper;
-    //TwitterAuthParams authParams;
     private String consumerKey = "CZib2bY2JwRMqinbLxpDVhtsQ";
     private String consumerSecret = "6wgkA8Gz1qtZhhGjTDQwGsFt4Sr2QLG7IaxAZLV818GWZwFKtP";
     private String token = "1428053550840651780-iQZiz9aCBEiATMjB68fwQ4DN1jvU6O";
@@ -38,7 +37,6 @@ public class TweetProducer implements ITweetProducer{
     public TweetProducer(KafkaTemplate<Integer, String> kafkaTemplate, ObjectMapper objectMapper) {
         this.kafkaTemplate = kafkaTemplate;
         this.objectMapper = objectMapper;
-        //this.authParams = authParams;
     }
 
     @Override
