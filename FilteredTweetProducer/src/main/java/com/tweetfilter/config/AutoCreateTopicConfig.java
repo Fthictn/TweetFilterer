@@ -8,8 +8,6 @@ import org.springframework.kafka.config.TopicBuilder;
 
 @Configuration
 public class AutoCreateTopicConfig {
-    //if create.topic that in side the app.yml is true create this bean
-    //so we dont need to use profile annotation
     @Bean
     @ConditionalOnProperty(name="create.topic", havingValue="true")
     public NewTopic tweetTopicCreator(){
