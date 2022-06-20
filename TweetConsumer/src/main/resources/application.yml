@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: local
+server:
+  port: 8081
+
+---
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: tweet-consumer-group
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: tweets
+      port: 27017
+      host: localhost
+      auto-index-creation: true
+  config:
+    activate:
+      on-profile: local
