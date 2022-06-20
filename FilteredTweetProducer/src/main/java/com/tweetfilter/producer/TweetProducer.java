@@ -91,10 +91,10 @@ public class TweetProducer implements ITweetProducer{
     }
 
     private void handleSuccess(SendResult<Integer, String> result) {
-        //log.info(result.toString());
+        log.info(result.toString());
     }
 
     private void handleFailure(Throwable ex){
-        //log.info(ex.getMessage());
+        log.info(ex.getMessage());
     }
 }
